@@ -1,0 +1,51 @@
+.message {
+  display: flex;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  align-self: end;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  height: auto;
+}
+
+.text-box {
+  position: relative;
+  background-color: darkgreen;
+  padding: 10px;
+  padding-bottom: 20px;
+  min-width: 200px;
+  border-radius: 5px 5px 5px 0;
+  color: #ffffff;
+}
+
+.text-box::before {
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: radial-gradient(at top left, transparent 70%, darkgreen 75%);
+}
+
+.user-name {
+  color: #fcee98;
+}
+
+.text {
+  margin: 0;
+}
+
+.time {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 12px;
+}

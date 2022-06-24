@@ -14,23 +14,24 @@ type GreetingContainerPropsType = {
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
   const [name, setName] = useState<string>('');
-  const [error, setError] = useState<string>('');
+  // const [error, setError] = useState<string>('');
 
-  const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-    const currentInputName = e.currentTarget.value.trim();
-    setName(currentInputName);
-    if (currentInputName !== '') {
-      setError('');
-    }
-  };
+  const error = name ? '' : 'error';
+
+
+  // const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const currentInputName = e.currentTarget.value.trim();
+  //   setName(currentInputName);
+  //   if (currentInputName !== '') {
+  //     setError('');
+  //   }
+  // };
 
   const addUser = () => {
     if (name !== '') {
       alert(`Hello, ${name}!`);
       addUserCallback(name);
-      setName('');
-    } else {
-      setError('name is required!')
+      // setName('');
     }
   };
 
@@ -45,7 +46,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
   return (
     <Greeting
       name={name}
-      setNameCallback={setNameCallback}
+      // setNameCallback={setNameCallback}
+      setName={setName}
       addUser={addUser}
       error={error}
       totalUsers={totalUsers}

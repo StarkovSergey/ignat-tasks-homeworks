@@ -1,80 +1,76 @@
-import React, {ChangeEvent, useState} from 'react'
-import SuperInputText from './common/c1-SuperInputText/SuperInputText'
-import s from './HW4.module.css'
-import SuperButton from './common/c2-SuperButton/SuperButton'
-import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
+import React, { ChangeEvent, useState } from 'react';
+import SuperInputText from './common/c1-SuperInputText/SuperInputText';
+import s from './HW4.module.css';
+import SuperButton from './common/c2-SuperButton/SuperButton';
+import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox';
 
-function HW4() {
-    const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+export function HW4() {
+  const [text, setText] = useState<string>('');
+  const error = text ? '' : 'error';
 
-    const showAlert = () => {
-        if (error) {
-            alert('введите текст...')
-        } else {
-            alert(text) // если нет ошибки показать текст
-        }
+  const showAlert = () => {
+    if (error) {
+      alert('введите текст...');
+    } else {
+      alert(text);
     }
+  };
 
-    const [checked, setChecked] = useState<boolean>(false)
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
+  const [checked, setChecked] = useState<boolean>(false);
+  const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
 
-    return (
-        <div>
-            <hr/>
-            homeworks 4
+  return (
+    <div>
+      <h3 className="homework-title">homeworks 4</h3>
 
-            <div className={s.column}>
-                <SuperInputText
-                    value={text}
-                    onChangeText={setText}
-                    onEnter={showAlert}
-                    error={error}
-                    // spanClassName={s.testSpanError}
-                />
+      <div className={s.column}>
+        <SuperInputText
+          value={text}
+          onChangeText={setText}
+          onEnter={showAlert}
+          error={error}
+          // spanClassName={s.testSpanError}
+        />
 
-                <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
-                />
+        <p>Next input</p>
 
-                {/*----------------------------------------------------*/}
+        <SuperInputText
+          className={s.blue} // проверьте, рабоет ли смешивание классов
+        />
 
-                <SuperButton>
-                    default
-                </SuperButton>
+        <p>Buttons</p>
 
-                <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
-                    onClick={showAlert}
-                >
-                    delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
+        <SuperButton>
+          default
+        </SuperButton>
 
-                <SuperButton disabled>
-                    disabled
-                </SuperButton>
+        <SuperButton
+          red // пропсу с булевым значением не обязательно указывать true
+          onClick={showAlert}
+        >
+          delete {/*// название кнопки попадёт в children*/}
+        </SuperButton>
 
-                {/*----------------------------------------------------*/}
+        <SuperButton disabled>
+          disabled
+        </SuperButton>
 
-                <SuperCheckbox
-                    checked={checked}
-                    onChangeChecked={setChecked}
-                >
-                    some text {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
+        <p>Checkboxes</p>
 
-                {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
-            </div>
+        <SuperCheckbox
+          checked={checked}
+          onChangeChecked={setChecked}
+        >
+          some text {/*// этот текст попадёт в children*/}
+        </SuperCheckbox>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
-            <hr/>
-        </div>
-    )
+        {/*// onChange тоже должен работать*/}
+        <SuperCheckbox checked={checked} onChange={testOnChange}/>
+      </div>
+
+      <hr/>
+    </div>
+  );
 }
 
-export default HW4
+export default HW4;

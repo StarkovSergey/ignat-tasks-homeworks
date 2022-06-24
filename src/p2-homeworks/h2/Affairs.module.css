@@ -1,3 +1,55 @@
-.someClass {
+.box {
+  width: fit-content;
+  padding: 10px;
+  border: 2px solid #41ad4c;
+  border-radius: 5px;
+}
 
+.affairs-box {
+  margin-bottom: 20px;
+}
+
+.affair {
+  display: flex;
+  gap: 5px;
+}
+
+.affair b {
+  flex-basis: 130px;
+}
+
+.priority {
+  flex-basis: 100px;
+}
+
+.affair + .affair {
+  margin-top: 10px;
+}
+
+.button-box {
+  display: flex;
+  gap: 10px;
+}
+
+.close-button {
+  background-color: darkgreen;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  background-color: darkgreen;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: opacity 300ms;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
 }

@@ -18,7 +18,7 @@ const Greeting: React.FC<GreetingPropsType> = ({name, addUser, error, totalUsers
 
   return (
     <div className={style.box}>
-      <SuperInputText onChangeText={props.setName} onEnter={() => {addUser()}}  error={error}/>
+      <SuperInputText value={name} onChangeText={props.setName} onEnter={() => {addUser()}}  error={error}/>
       {/*<input value={name} onChange={setNameCallback} onKeyDown={keyDownHandler} className={inputClass}/>*/}
       <SuperButton onClick={addUser} disabled={!name}>add</SuperButton>
       {/*<button className={style.button} onClick={addUser} disabled={!name}>add</button>*/}

@@ -1,12 +1,10 @@
 import React from 'react';
 
-export function Error404() {
+export function JuniorPlus() {
   return (
     <div>
-      <div>404</div>
-      <div>Page not found!</div>
-      <div>—ฅ/ᐠ.̫ .ᐟ\ฅ—</div>
+      <h1>Junior Plus</h1>
       <img src="https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg" alt="" />
-    </div>
-  );
+      {/*<HW6/>*/}
+    </div>);
 }

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ignat-tasks-homeworks/static/css/main.1240c5ef.css",
+    "main.css": "/ignat-tasks-homeworks/static/css/main.88bbe1a3.css",
     "main.js": "/ignat-tasks-homeworks/static/js/main.dfe74a12.js",
     "static/media/check-mark.png": "/ignat-tasks-homeworks/static/media/check-mark.d7b56d85ae00d37694ff.png",
     "index.html": "/ignat-tasks-homeworks/index.html",
-    "main.1240c5ef.css.map": "/ignat-tasks-homeworks/static/css/main.1240c5ef.css.map",
+    "main.88bbe1a3.css.map": "/ignat-tasks-homeworks/static/css/main.88bbe1a3.css.map",
     "main.dfe74a12.js.map": "/ignat-tasks-homeworks/static/js/main.dfe74a12.js.map"
   },
   "entrypoints": [
-    "static/css/main.1240c5ef.css",
+    "static/css/main.88bbe1a3.css",
     "static/js/main.dfe74a12.js"
   ]
 }

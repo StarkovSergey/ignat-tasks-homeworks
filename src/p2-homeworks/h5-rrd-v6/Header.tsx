@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Header.module.css';
 
+// TODO: применить стили для активной NavLink
 function Header() {
   return (
     <header className={style.header}>

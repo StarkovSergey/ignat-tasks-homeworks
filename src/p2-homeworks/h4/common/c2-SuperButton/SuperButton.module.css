@@ -12,6 +12,10 @@
     transition: opacity 300ms;
 }
 
+.button + .button {
+    margin-left: 10px;
+}
+
 .button:disabled {
     background-color: #a9a9a9;
     cursor: initial;

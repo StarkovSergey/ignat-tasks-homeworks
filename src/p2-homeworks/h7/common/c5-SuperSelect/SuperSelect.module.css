@@ -1,0 +1,35 @@
+.select {
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  border:none;
+  color: white;
+  background-color: darkgreen;
+  cursor: pointer;
+  transition: background-color 200ms;
+
+  /*appearance: none;*/
+}
+
+.select:hover,
+.select:focus {
+  background-color: green;
+}
+
+.select:hover,
+.select:focus {
+  border: none;
+}
+
+.option {
+
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.option:checked {
+  background-color: darkgreen;
+}

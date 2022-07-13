@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './Message.module.css';
+import SuperEditableSpan from '../h6/common/c4-SuperEditableSpan/SuperEditableSpan';
 
 type MessagePropsType = {
   avatar: string;
@@ -16,7 +17,9 @@ function Message(props: MessagePropsType) {
       </div>
       <div className={style['text-box']}>
         <b className={style['user-name']}>{props.name}</b>
-        <p className={style.text}>{props.message}</p>
+        <div>
+          <SuperEditableSpan spanProps={{ children: 'some text...' }}/>
+        </div>
         <time className={style.time}>{props.time}</time>
       </div>
     </div>

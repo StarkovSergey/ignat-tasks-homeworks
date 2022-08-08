@@ -1,14 +1,15 @@
 import React from 'react'
+import { Slider } from '@mui/material'
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
+    onChange: (event: Event, value: number | number[]) => void
+    value: number | number[]
     // min, max, step, disable, ...
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange, value,
+      onChange, value,
         // min, max, step, disable, ...
     }
 ) => {
@@ -16,7 +17,13 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     return (
         <>
-            DoubleRange
+          <Slider
+            color={"secondary"}
+            sx={{width: "300px", margin: "10px"}}
+            value={value}
+            onChange={onChange}
+            valueLabelDisplay="auto"
+          />
         </>
     )
 }

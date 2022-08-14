@@ -1,0 +1,13 @@
+.App {
+  padding: 10px;
+}
+
+.dark {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+.red {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}

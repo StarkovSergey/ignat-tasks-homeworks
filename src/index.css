@@ -25,3 +25,18 @@ button {
 p {
   margin: 10px 0;
 }
+
+:root {
+  --color-gray: #212020;
+  --color-white: #ffffff;
+  --color-red: #d16969;
+  --color-special: darkgreen;
+}
+
+.red {
+  --color-special: orange;
+}
+
+.dark {
+  --color-special: #2f592f;
+}

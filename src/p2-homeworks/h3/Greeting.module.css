@@ -8,7 +8,7 @@
 .input-name {
   padding: 5px;
   border-radius: 3px;
-  border: 2px solid darkgreen;
+  border: 2px solid var(--color-special);
 }
 
 .error,
@@ -19,7 +19,7 @@
 .button {
   padding: 7px;
   border: none;
-  background-color: darkgreen;
+  background-color: var(--color-special);
   color: white;;
   border-radius: 5px;
   transition: all 200ms;

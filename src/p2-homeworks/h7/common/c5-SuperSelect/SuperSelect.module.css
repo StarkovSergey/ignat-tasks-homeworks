@@ -5,7 +5,7 @@
   font-size: 14px;
   border:none;
   color: white;
-  background-color: darkgreen;
+  background-color: var(--color-special);
   cursor: pointer;
   transition: background-color 200ms;
 
@@ -14,7 +14,7 @@
 
 .select:hover,
 .select:focus {
-  background-color: green;
+  background-color: var(--color-special);
 }
 
 .select:hover,
@@ -31,5 +31,5 @@
 }
 
 .option:checked {
-  background-color: darkgreen;
+  background-color: var(--color-special);
 }
